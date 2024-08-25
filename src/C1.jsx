@@ -1,11 +1,11 @@
 import C2 from "./C2"
 
-const C1 = ({adetDegeri})=> {
+const C1 = ()=> {
     
     return(
         <>
         <p>BEN C1 Komponentiyim</p>
-        <C2 adetDegeri2 = {adetDegeri} />
+        <C2 />
         </>
     )
 }

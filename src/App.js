@@ -2,15 +2,18 @@
 import { useState } from 'react';
 import './App.css';
 import C1 from './C1';
+import GlobalContext from './context';
 
 function App() {
 
-  const [adet,setAdet] = useState(0)
-
+  const [giris,setGiris] = useState(false)
+  const veri = {giris,setGiris}  // birden fazla veriyi göndereceksek obje biçiminde tanımlıyoruz
   return (
-   <>
-    <C1 adetDegeri = {adet} />
-   </>
+   
+    <GlobalContext.Provider value={veri}>
+      <C1 />
+    </GlobalContext.Provider>
+   
   );
 }
 
